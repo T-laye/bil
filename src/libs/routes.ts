@@ -1,4 +1,4 @@
 export const pageRoutes = {
 	home: "/",
-	about: "#about",
+	about: "/#about",
 };
