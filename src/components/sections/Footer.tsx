@@ -5,12 +5,12 @@ import { pageRoutes } from "../../libs/routes";
 export default function Footer() {
 	return (
 		<footer className="bg-[#0E161E] text-white">
-			<div className="custom-container flex justify-between items-center py-9 gap-10 ">
-				<div className="max-w-72 flex flex-col gap-4">
-					<div className="w-15">
+			<div className="custom-container flex justify-between items-center py-9 sm:py-12 gap-10 ">
+				<div className="max-w-72 flex flex-col gap-4 sm:gap-6">
+					<div className="w-15 sm:w-20">
 						<Logo />
 					</div>
-					<p className="text-sm">
+					<p className="max-sm:text-sm">
 						We help ideas, products, and people scale faster through community
 						initiatives & partnerships.
 					</p>
