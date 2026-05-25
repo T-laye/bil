@@ -6,7 +6,7 @@ export default function About() {
 	const ads = ["googleads.svg", "youtube.svg", "fiverr.svg", "amazon.svg"];
 
 	return (
-		<section className=" bg-[#F8F9FF] py-14 sm:py-20" id="about">
+		<section className="py-14 sm:py-20" id="about">
 			<div className="custom-container">
 				<div className="text-center max-w-xl mx-auto md:px-6">
 					<h2 className="text-3xl sm:text-[36px] sm:leading-11 text-foreground/60">
