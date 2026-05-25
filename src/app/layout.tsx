@@ -10,7 +10,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-	title: "BIL",
+	title: "Builders Innovation Labs (BIL)",
 	description:
 		"We connect talented builders, startups, and universities with global opportunities while helping international companies enter and grow across Africa. Through hackathons, builder residency programs, workshops, meetups, incubators, accelerators, partnerships and community-driven initiatives, we help ideas, products, and people scale faster.",
 
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 	],
 
 	openGraph: {
-		title: "BIL",
+		title: "Builders Innovation Labs (BIL)",
 		description:
 			"Building Africa’s talent and product pipeline by connecting builders, startups, universities, and global companies through events, hackathons, accelerators, partnerships, and community-driven initiatives.",
 		type: "website",
@@ -42,15 +42,15 @@ export const metadata: Metadata = {
 				url: "/images/bil-preview.webp",
 				width: 1200,
 				height: 630,
-				alt: "BIL",
+				alt: "Builders Innovation Labs (BIL)",
 			},
 		],
-		siteName: "BIL",
+		siteName: "Builders Innovation Labs (BIL)",
 	},
 
 	twitter: {
 		card: "summary_large_image",
-		title: "BIL",
+		title: "Builders Innovation Labs (BIL)",
 		description:
 			"Building Africa’s talent and product pipeline through community, innovation, events, and global opportunities.",
 		images: ["/images/bil-preview.webp"],
