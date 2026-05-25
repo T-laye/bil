@@ -10,7 +10,7 @@ const sectionVariants = {
 		y: 0,
 		transition: {
 			duration: 0.7,
-			ease: [0.25, 0.1, 0.25, 1],
+			ease: [0.25, 0.1, 0.25, 1] as const,
 		},
 	},
 };
@@ -32,7 +32,7 @@ const cardVariants = {
 		y: 0,
 		transition: {
 			duration: 0.65,
-			ease: [0.25, 0.1, 0.25, 1],
+			ease: [0.25, 0.1, 0.25, 1] as const,
 		},
 	},
 };
@@ -68,6 +68,7 @@ export default function How() {
 			initial="hidden"
 			whileInView="visible"
 			viewport={{ once: true, amount: 0.2 }}
+            id="how"
 		>
 			<div className="custom-container">
 				<motion.h2
