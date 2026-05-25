@@ -13,6 +13,10 @@
 	--font-sans: var(--font-roboto);
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background: var(--background);
 	color: var(--foreground);
@@ -21,4 +25,22 @@ body {
 
 .custom-container {
 	@apply max-w-300 mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+@keyframes marquee {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+.marquee {
+	animation: marquee 20s linear infinite;
+}
+
+.marquee:hover {
+	animation-play-state: paused;
 }
