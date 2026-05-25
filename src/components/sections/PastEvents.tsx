@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function PastEvents() {
 	const [activeIndex, setActiveIndex] = useState(0);
@@ -40,6 +41,7 @@ export default function PastEvents() {
 					Past Events
 				</h2>
 
+				{/* Desktop */}
 				<div className="flex max-md:hidden">
 					{events.map((event, index) => (
 						<ImageCard
@@ -50,6 +52,45 @@ export default function PastEvents() {
 							fn={() => setActiveIndex(index)}
 							active={index === activeIndex}
 						/>
+					))}
+				</div>
+
+				{/* Mobile Sticky Stack */}
+				<div className="md:hidden relative">
+					{events.map((event, index) => (
+						<motion.div
+							key={index}
+							className="sticky top-20 h-[50vh] sm:h-[75vh] rounded-3xl overflow-hidden mb-6"
+							style={{
+								zIndex: index + 1,
+								backgroundImage: `url(${event.img})`,
+								backgroundSize: "cover",
+								backgroundPosition: "center",
+							}}
+							initial={{
+								scale: 0.95,
+								opacity: 0.7,
+							}}
+							whileInView={{
+								scale: 1,
+								opacity: 1,
+							}}
+							transition={{
+								duration: 0.5,
+							}}
+							viewport={{
+								once: false,
+								amount: 0.6,
+							}}
+						>
+							<div className="absolute inset-0 bg-black/25" />
+
+							<div className="relative h-full flex items-end p-6">
+								<h3 className="text-white text-2xl font-medium">
+									{event.title}
+								</h3>
+							</div>
+						</motion.div>
 					))}
 				</div>
 			</div>
@@ -86,10 +127,10 @@ function ImageCard({
 			) : (
 				<div
 					onClick={fn}
-					className={` ${inActiveColor} transition-all duration-300  flex items-center justify-center max-w-24`}
+					className={`${inActiveColor} transition-all duration-300 flex items-center justify-center max-w-24`}
 				>
 					<h3
-						className={` ${inActiveColor} text-white text-[28px] font-medium whitespace-nowrap -rotate-90 transition-all duration-300 cursor-pointer`}
+						className={`${inActiveColor} text-white text-[28px] font-medium whitespace-nowrap -rotate-90 transition-all duration-300 cursor-pointer`}
 					>
 						{title}
 					</h3>
