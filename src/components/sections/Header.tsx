@@ -18,11 +18,11 @@ const navLinks = [
 	},
 	{
 		label: "ACTIVATION",
-		href: pageRoutes.home,
+		href: pageRoutes.activation,
 	},
 	{
 		label: "EVENTS",
-		href: pageRoutes.home,
+		href: pageRoutes.events,
 	},
 ];
 
