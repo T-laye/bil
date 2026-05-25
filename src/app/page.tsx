@@ -3,6 +3,7 @@ import Footer from "../components/sections/Footer";
 import Header from "../components/sections/Header";
 import Hero from "../components/sections/Hero";
 import How from "../components/sections/How";
+import JoinCommunity from "../components/sections/JoinCommunity";
 
 export default function Home() {
 	return (
@@ -11,6 +12,7 @@ export default function Home() {
 			<Hero />
 			<About />
 			<How />
+			<JoinCommunity />
 			<Footer />
 		</div>
 	);
