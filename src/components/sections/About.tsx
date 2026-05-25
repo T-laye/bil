@@ -3,7 +3,15 @@ import Image from "next/image";
 import { motion, useAnimationControls } from "framer-motion";
 
 export default function About() {
-	const ads = ["googleads.svg", "youtube.svg", "fiverr.svg", "amazon.svg"];
+	const partners = [
+		"stellar.svg",
+		"nothing.svg",
+		"diamond.svg",
+		"3mtt.svg",
+		"cmfest.svg",
+		"webflow.svg",
+		"orbit.svg",
+	];
 
 	return (
 		<section className="py-14 sm:py-20" id="about">
@@ -24,12 +32,12 @@ export default function About() {
 
 			<Gallery />
 
-			<div className="custom-container flex justify-center items-center flex-wrap mt-10 sm:mt-20">
-				{ads.map((a) => (
-					<div key={a} className="w-36 sm:w-47.75">
+			<div className="max-w-350 px-4 flex justify-center items-center flex-wrap mt-10 sm:mt-20 gap-7">
+				{partners.map((partner) => (
+					<div key={partner} className="h-14 flex items-center">
 						<Image
-							alt="ads"
-							src={`/images/${a}`}
+							alt="Partner"
+							src={`/images/partners/${partner}`}
 							width={100}
 							height={100}
 							className="w-full object-contain"
