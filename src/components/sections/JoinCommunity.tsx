@@ -4,6 +4,7 @@ import React from "react";
 
 import { motion } from "framer-motion";
 import Button from "../ui/Button";
+import { pageRoutes } from "../../libs/routes";
 
 const fadeUp = {
 	hidden: {
@@ -57,7 +58,13 @@ export default function JoinCommunity() {
 						whileTap={{ scale: 0.97 }}
 						className="w-full"
 					>
-						<Button className="w-full">Join the community</Button>
+						<Button
+							href={pageRoutes.joinCommunity}
+							target="_blank"
+							className="w-full"
+						>
+							Join the community
+						</Button>
 					</motion.div>
 
 					<motion.div
