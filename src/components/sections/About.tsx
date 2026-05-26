@@ -3,16 +3,6 @@ import Image from "next/image";
 import { motion, useAnimationControls } from "framer-motion";
 
 export default function About() {
-	const partners = [
-		"stellar.svg",
-		"nothing.svg",
-		"diamond.svg",
-		"3mtt.svg",
-		"cmfest.svg",
-		"webflow.svg",
-		"orbit.svg",
-	];
-
 	return (
 		<section className="py-14 sm:py-20" id="about">
 			<div className="custom-container">
@@ -32,19 +22,88 @@ export default function About() {
 
 			<Gallery />
 
-			<div className="max-w-350 px-4 flex justify-center items-center flex-wrap mt-10 sm:mt-20 gap-7">
-				{partners.map((partner) => (
-					<div key={partner} className="h-14 flex items-center">
+			<Partners />
+		</section>
+	);
+}
+
+function Partners() {
+	const partners = [
+		"stellar.svg",
+		"stellar_original.svg",
+		"nothing.svg",
+		"diamond.svg",
+		"3mtt.svg",
+		"cmfest.svg",
+		"webflow.svg",
+		"orbit.svg",
+		"polygon.svg",
+		"digital_ocean.svg",
+		"skysenx.svg",
+		"no-code.svg",
+		"web_3_partners.svg",
+		"flow.svg",
+	];
+
+	const duplicatedPartners = [...partners, ...partners];
+
+	const controls = useAnimationControls();
+
+	const handleMouseEnter = () => {
+		controls.stop();
+	};
+
+	const handleMouseLeave = () => {
+		controls.start({
+			x: ["-50%", '0%'],
+			transition: {
+				x: {
+					duration: 18,
+					ease: "linear",
+					repeat: Infinity,
+					repeatType: "loop",
+				},
+			},
+		});
+	};
+
+	return (
+		<section className="overflow-hidden mt-10 sm:mt-20">
+			<motion.div
+				className="flex items-center gap-10 sm:gap-14 w-max"
+				animate={controls}
+				initial={{ x: 0 }}
+				onViewportEnter={() => {
+					controls.start({
+						x: ["-50%", "0%"],
+						transition: {
+							x: {
+								duration: 18,
+								ease: "linear",
+								repeat: Infinity,
+								repeatType: "loop",
+							},
+						},
+					});
+				}}
+				onMouseEnter={handleMouseEnter}
+				onMouseLeave={handleMouseLeave}
+			>
+				{duplicatedPartners.map((partner, index) => (
+					<div
+						key={`${partner}-${index}`}
+						className="h-10 sm:h-12 md:h-14 shrink-0 flex items-center"
+					>
 						<Image
 							alt="Partner"
 							src={`/images/partners/${partner}`}
-							width={100}
-							height={100}
-							className="w-full object-contain"
+							width={140}
+							height={80}
+							className="h-full w-auto object-contain"
 						/>
 					</div>
 				))}
-			</div>
+			</motion.div>
 		</section>
 	);
 }

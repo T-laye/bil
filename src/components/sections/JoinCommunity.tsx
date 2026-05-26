@@ -72,7 +72,12 @@ export default function JoinCommunity() {
 						whileTap={{ scale: 0.97 }}
 						className="w-full"
 					>
-						<Button className="w-full" variant="outline-black">
+						<Button
+							href={pageRoutes.partnerWithUs}
+							target="_blank"
+							className="w-full"
+							variant="outline-black"
+						>
 							Partner with us
 						</Button>
 					</motion.div>

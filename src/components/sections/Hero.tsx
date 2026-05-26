@@ -84,7 +84,12 @@ export default function Hero() {
 						whileTap={{ scale: 0.97 }}
 						className="w-full"
 					>
-						<Button className="w-full" variant="outline-white">
+						<Button
+							href={pageRoutes.partnerWithUs}
+							target="_blank"
+							className="w-full"
+							variant="outline-white"
+						>
 							Partner with us
 						</Button>
 					</motion.div>

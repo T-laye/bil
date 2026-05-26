@@ -38,7 +38,7 @@ export default function PastEvents() {
 		<section id="events" className="pt-20 pb-12">
 			<div className="custom-container">
 				<h2 className="mb-10 font-medium text-2xl sm:text-[28px]">
-					Past Events
+					Past Initiatives & Partnerships
 				</h2>
 
 				{/* Desktop */}
