@@ -49,7 +49,7 @@ export default function Header() {
 							<li key={link.label}>
 								<Link
 									href={link.href}
-									className="transition-opacity duration-300 hover:opacity-70"
+									className="transition-all duration-300 hover:text-primary"
 								>
 									{link.label}
 								</Link>
